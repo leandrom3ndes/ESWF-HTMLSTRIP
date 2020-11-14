@@ -39,13 +39,6 @@ namespace HtmlStrip
             return urlData;
         }
 
-        public static String ReadInput()
-        {
-            Console.Write("?");
-            string input = Console.ReadLine();
-            return input;
-        }
-
         public static String ExtractHtml(String urlData)
         {
             String htmlAfterStrip = Regex.Replace(urlData, "<.*?>", "");
