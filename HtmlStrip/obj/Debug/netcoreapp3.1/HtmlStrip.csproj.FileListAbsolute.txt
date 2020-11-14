@@ -1,0 +1,13 @@
+C:\Users\Admin\Desktop\Francisco\Universidade\Mestrado\ES\Assignments\HTMLStrip-group\ESWF-HTMLSTRIP\HtmlStrip\bin\Debug\netcoreapp3.1\HtmlStrip.exe
+C:\Users\Admin\Desktop\Francisco\Universidade\Mestrado\ES\Assignments\HTMLStrip-group\ESWF-HTMLSTRIP\HtmlStrip\bin\Debug\netcoreapp3.1\HtmlStrip.deps.json
+C:\Users\Admin\Desktop\Francisco\Universidade\Mestrado\ES\Assignments\HTMLStrip-group\ESWF-HTMLSTRIP\HtmlStrip\bin\Debug\netcoreapp3.1\HtmlStrip.runtimeconfig.json
+C:\Users\Admin\Desktop\Francisco\Universidade\Mestrado\ES\Assignments\HTMLStrip-group\ESWF-HTMLSTRIP\HtmlStrip\bin\Debug\netcoreapp3.1\HtmlStrip.runtimeconfig.dev.json
+C:\Users\Admin\Desktop\Francisco\Universidade\Mestrado\ES\Assignments\HTMLStrip-group\ESWF-HTMLSTRIP\HtmlStrip\bin\Debug\netcoreapp3.1\HtmlStrip.dll
+C:\Users\Admin\Desktop\Francisco\Universidade\Mestrado\ES\Assignments\HTMLStrip-group\ESWF-HTMLSTRIP\HtmlStrip\bin\Debug\netcoreapp3.1\HtmlStrip.pdb
+C:\Users\Admin\Desktop\Francisco\Universidade\Mestrado\ES\Assignments\HTMLStrip-group\ESWF-HTMLSTRIP\HtmlStrip\obj\Debug\netcoreapp3.1\HtmlStrip.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\Francisco\Universidade\Mestrado\ES\Assignments\HTMLStrip-group\ESWF-HTMLSTRIP\HtmlStrip\obj\Debug\netcoreapp3.1\HtmlStrip.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Francisco\Universidade\Mestrado\ES\Assignments\HTMLStrip-group\ESWF-HTMLSTRIP\HtmlStrip\obj\Debug\netcoreapp3.1\HtmlStrip.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Francisco\Universidade\Mestrado\ES\Assignments\HTMLStrip-group\ESWF-HTMLSTRIP\HtmlStrip\obj\Debug\netcoreapp3.1\HtmlStrip.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Francisco\Universidade\Mestrado\ES\Assignments\HTMLStrip-group\ESWF-HTMLSTRIP\HtmlStrip\obj\Debug\netcoreapp3.1\HtmlStrip.dll
+C:\Users\Admin\Desktop\Francisco\Universidade\Mestrado\ES\Assignments\HTMLStrip-group\ESWF-HTMLSTRIP\HtmlStrip\obj\Debug\netcoreapp3.1\HtmlStrip.pdb
+C:\Users\Admin\Desktop\Francisco\Universidade\Mestrado\ES\Assignments\HTMLStrip-group\ESWF-HTMLSTRIP\HtmlStrip\obj\Debug\netcoreapp3.1\HtmlStrip.genruntimeconfig.cache

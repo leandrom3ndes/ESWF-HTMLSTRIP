@@ -1,32 +1,29 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joaol\\OneDrive\\Documentos\\GitHub\\ESWF-HTMLSTRIP\\HtmlStrip\\HtmlStrip.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\Francisco\\Universidade\\Mestrado\\ES\\Assignments\\HTMLStrip-group\\ESWF-HTMLSTRIP\\HtmlStrip\\HtmlStrip.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joaol\\OneDrive\\Documentos\\GitHub\\ESWF-HTMLSTRIP\\HtmlStrip\\HtmlStrip.csproj": {
+    "C:\\Users\\Admin\\Desktop\\Francisco\\Universidade\\Mestrado\\ES\\Assignments\\HTMLStrip-group\\ESWF-HTMLSTRIP\\HtmlStrip\\HtmlStrip.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joaol\\OneDrive\\Documentos\\GitHub\\ESWF-HTMLSTRIP\\HtmlStrip\\HtmlStrip.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Francisco\\Universidade\\Mestrado\\ES\\Assignments\\HTMLStrip-group\\ESWF-HTMLSTRIP\\HtmlStrip\\HtmlStrip.csproj",
         "projectName": "HtmlStrip",
-        "projectPath": "C:\\Users\\joaol\\OneDrive\\Documentos\\GitHub\\ESWF-HTMLSTRIP\\HtmlStrip\\HtmlStrip.csproj",
-        "packagesPath": "C:\\Users\\joaol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joaol\\OneDrive\\Documentos\\GitHub\\ESWF-HTMLSTRIP\\HtmlStrip\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\Francisco\\Universidade\\Mestrado\\ES\\Assignments\\HTMLStrip-group\\ESWF-HTMLSTRIP\\HtmlStrip\\HtmlStrip.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\Francisco\\Universidade\\Mestrado\\ES\\Assignments\\HTMLStrip-group\\ESWF-HTMLSTRIP\\HtmlStrip\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\joaol\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "netcoreapp3.1": {
             "projectReferences": {}
           }
         },
@@ -37,8 +34,7 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "netcoreapp3.1": {
           "imports": [
             "net461",
             "net462",
@@ -54,7 +50,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

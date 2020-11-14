@@ -1,5 +1,0 @@
-C:\Users\joaol\OneDrive\Documentos\GitHub\ESWF-HTMLSTRIP\HtmlStrip\obj\Debug\net5.0\HtmlStrip.csprojAssemblyReference.cache
-C:\Users\joaol\OneDrive\Documentos\GitHub\ESWF-HTMLSTRIP\HtmlStrip\obj\Debug\net5.0\HtmlStrip.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\joaol\OneDrive\Documentos\GitHub\ESWF-HTMLSTRIP\HtmlStrip\obj\Debug\net5.0\HtmlStrip.AssemblyInfoInputs.cache
-C:\Users\joaol\OneDrive\Documentos\GitHub\ESWF-HTMLSTRIP\HtmlStrip\obj\Debug\net5.0\HtmlStrip.AssemblyInfo.cs
-C:\Users\joaol\OneDrive\Documentos\GitHub\ESWF-HTMLSTRIP\HtmlStrip\obj\Debug\net5.0\HtmlStrip.csproj.CoreCompileInputs.cache
