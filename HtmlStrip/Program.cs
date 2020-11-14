@@ -2,7 +2,7 @@
 {
     class Program
     {   
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
             Interface.LoadUI();
         }
