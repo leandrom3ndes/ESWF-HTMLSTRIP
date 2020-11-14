@@ -1,0 +1,7 @@
+C:\Users\lenovo\source\repos\HtmlStrip\HtmlStrip\bin\Debug\HtmlStrip.exe.config
+C:\Users\lenovo\source\repos\HtmlStrip\HtmlStrip\bin\Debug\HtmlStrip.exe
+C:\Users\lenovo\source\repos\HtmlStrip\HtmlStrip\bin\Debug\HtmlStrip.pdb
+C:\Users\lenovo\source\repos\HtmlStrip\HtmlStrip\obj\Debug\HtmlStrip.csprojAssemblyReference.cache
+C:\Users\lenovo\source\repos\HtmlStrip\HtmlStrip\obj\Debug\HtmlStrip.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\source\repos\HtmlStrip\HtmlStrip\obj\Debug\HtmlStrip.exe
+C:\Users\lenovo\source\repos\HtmlStrip\HtmlStrip\obj\Debug\HtmlStrip.pdb
