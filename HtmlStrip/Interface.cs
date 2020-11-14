@@ -35,7 +35,7 @@ namespace HtmlStrip
             Console.WriteLine("");
         }
 
-        public static void GetInput()  //Escolhe a ação a fazer
+        private static void GetInput()  //Escolhe a ação a fazer
         {
             string option = Methods.ReadInput();
             string data;
@@ -61,7 +61,7 @@ namespace HtmlStrip
             ExtrationMode(data);
         }
 
-        public static void ExtrationMode(String data)
+        private static void ExtrationMode(String data)
         {
             string option = Methods.ReadInput();
             string HtmlStriped = Methods.ExtractHtml(data);
@@ -83,7 +83,7 @@ namespace HtmlStrip
 
         }
 
-        public static String GetHtmlByUrl()  //executa 1º opção
+        private static String GetHtmlByUrl()  //executa 1º opção
         {
             Console.WriteLine("Escreva o URL desejado");
             Console.Write("? ");
@@ -93,7 +93,7 @@ namespace HtmlStrip
 
         }
 
-        public static String GetHtmlByPath() //executa 2º opção
+        private static String GetHtmlByPath() //executa 2º opção
         {
             Console.WriteLine("Escreva o caminho do ficheiro Html");
             Console.Write("? ");
@@ -103,7 +103,7 @@ namespace HtmlStrip
             return pathInput;
         }
 
-        public static String GetHtmlByInput() //executa 3º opção
+        private static String GetHtmlByInput() //executa 3º opção
         {
             return Methods.OptionPasteHTML();
 
