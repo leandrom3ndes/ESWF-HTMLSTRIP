@@ -47,7 +47,7 @@ namespace HtmlStrip
 
         public static string ExtractHtml(string urlData)
         {
-            string htmlAfterStrip = Regex.Replace(urlData, "<.*?>", "");
+            string htmlAfterStrip = Regex.Replace(urlData, "<(.|\n)*?>", "");
 
             return htmlAfterStrip;
         }
