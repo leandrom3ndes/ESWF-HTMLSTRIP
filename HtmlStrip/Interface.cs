@@ -96,7 +96,6 @@ namespace HtmlStrip
                     ExtrationMode(dataString);
                     break;
                 default:
-                    data = "";
                     Console.WriteLine("Selecione uma das opções anteriores.");
                     GetInput();
                     break;
