@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.IO;
 namespace HtmlStrip
 {
     public static class Interface
@@ -35,6 +35,16 @@ namespace HtmlStrip
             Console.WriteLine("");
         }
 
+        public static void FileUI()
+        {
+            Console.WriteLine("Escolha o que deseja fazer");
+            Console.WriteLine("1. Escrever o novo conteudo");
+            Console.WriteLine("2. Apagar o conteudo e escrever o novo");
+            Console.WriteLine("3. Ir para trás");
+            Console.WriteLine("");
+
+        }
+
         private static void GetInput()  //Escolhe a ação a fazer
         {   
             try {
@@ -66,6 +76,33 @@ namespace HtmlStrip
                 LoadUI();
             }
         }
+
+        public static void GetInputFile(string dataString)  //Escolhe a ação a fazer
+        {
+
+            string option = Methods.ReadInput();
+            string data;
+            switch (option)
+            {
+                case "1":
+                    File.AppendAllText(Methods.pathString, "\r\n" + dataString);
+                    Console.WriteLine("Novo conteudo foi adicionado com sucesso!");
+                    break;
+                case "2":
+                     File.WriteAllText(Methods.pathString, dataString + "\r\n");
+                     Console.WriteLine("Apagou o conteudo antigo, e escreveu um novo com sucesso!");
+                    break;
+                case "3":
+                    LoadSecondScreen();
+                    ExtrationMode(dataString);
+                    break;
+                default:
+                    data = "";
+                    Console.WriteLine("Selecione uma das opções anteriores.");
+                    GetInput();
+                    break;
+            }
+        }   
 
         private static void ExtrationMode(string data)
         {

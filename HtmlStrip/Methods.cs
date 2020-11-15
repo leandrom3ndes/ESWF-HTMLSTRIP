@@ -9,7 +9,7 @@ namespace HtmlStrip
     public static class Methods
     {
         private static string fileName;
-        private static string pathString;
+        public static string pathString;
 
         public static string GetUrlData(string urlAddress)  //dá return do HTML inteiro
         {
@@ -81,7 +81,7 @@ namespace HtmlStrip
         string folderName = @diretorio;
 
         //Criar uma subPasta nesse diretorio com um nome especifico
-        pathString = System.IO.Path.Combine(folderName, "SubFolder");
+        pathString = System.IO.Path.Combine(folderName, "PastaHTMLSTRIP");
 
         // Criar o diretorio
         System.IO.Directory.CreateDirectory(pathString);
@@ -90,8 +90,8 @@ namespace HtmlStrip
         string userName = Console.ReadLine();
         //Criar o nome do ficheiro
         fileName = userName + ".txt";
-
-        // Use Combine again to add the file name to the path.
+        
+        //Adicionar o nome do ficheiro ao diretorio
         pathString = System.IO.Path.Combine(pathString, fileName);
 
         writeFile( data );
@@ -114,8 +114,13 @@ namespace HtmlStrip
         }
         else
         {
-            Console.WriteLine("Ficheiro " + fileName + " já existe. Tenta outro nome.");
-            criarFicheiro( data );
+            Console.WriteLine("*********************************************");
+            Console.WriteLine("-> O ficheiro \"{0}\" já existe. <-", fileName);
+            Console.WriteLine("*********************************************");
+            Console.WriteLine("");
+            Interface.FileUI();
+            Interface.GetInputFile(data);
+            
         }
 
     }
