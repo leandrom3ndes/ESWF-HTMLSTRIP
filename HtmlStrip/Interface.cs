@@ -8,7 +8,7 @@ namespace HtmlStrip
         {
             Console.WriteLine("*********************************************");
             Console.WriteLine("------------------HtmlStrip------------------");
-            Console.WriteLine("Nome dos elementos do grupo");
+            Console.WriteLine("Nome dos elementos do grupo:\nFrancisco Pontes\nDiogo Mesquita\nFrancisco Chaves\nLeandro Mendes");
             Console.WriteLine("*********************************************");
             Console.WriteLine("");
             Console.WriteLine("");
@@ -36,40 +36,47 @@ namespace HtmlStrip
         }
 
         private static void GetInput()  //Escolhe a ação a fazer
-        {
-            string option = Methods.ReadInput();
-            string data;
-            switch (option)
-            {
-                case "1":
-                    data = GetHtmlByUrl();
-                    break;
-                case "2":
-                    data = GetHtmlByPath();
-                    break;
-                case "3":
-                    data = GetHtmlByInput();
-                    break;
-                default:
-                    data = "";
-                    Console.WriteLine("Selecione uma das opções anteriores.");
-                    GetInput();
-                    break;
+        {   
+            try {
+                string option = Methods.ReadInput();
+                string data;
+                switch (option)
+                {
+                    case "1":
+                        data = GetHtmlByUrl();
+                        break;
+                    case "2":
+                        data = GetHtmlByPath();
+                        break;
+                    case "3":
+                        data = GetHtmlByInput();
+                        break;
+                    default:
+                        data = "";
+                        Console.WriteLine("Selecione uma das opções anteriores.");
+                        GetInput();
+                        break;
+                }
+  
+                LoadSecondScreen();
+                ExtrationMode(data);
             }
-            //Methods.ExtractHtml(data);
-            LoadSecondScreen();
-            ExtrationMode(data);
+            catch ( Exception e ){
+                Console.WriteLine( "Exception:" + e.Message + "\n Tente novamente.");
+                LoadUI();
+            }
         }
 
-        private static void ExtrationMode(String data)
+        private static void ExtrationMode(string data)
         {
             string option = Methods.ReadInput();
             string HtmlStriped = Methods.ExtractHtml(data);
             string HtmlStripedWithoutEmptySpaces = Methods.RemoveWhiteSpaces(HtmlStriped);
+
             switch (option)
             {
                 case "1":
-                    Console.WriteLine(HtmlStripedWithoutEmptySpaces);
+                    Console.WriteLine( "Resultado do HTMLStrip: \n" + HtmlStripedWithoutEmptySpaces);
                     break;
                 case "2":
                     Methods.criarFicheiro( HtmlStripedWithoutEmptySpaces );
@@ -82,7 +89,7 @@ namespace HtmlStrip
 
         }
 
-        private static String GetHtmlByUrl()  //executa 1º opção
+        private static string GetHtmlByUrl()  //executa 1º opção
         {
             Console.WriteLine("Escreva o URL desejado");
             Console.Write("? ");
@@ -92,7 +99,7 @@ namespace HtmlStrip
 
         }
 
-        private static String GetHtmlByPath() //executa 2º opção
+        private static string GetHtmlByPath() //executa 2º opção
         {
             Console.WriteLine("Escreva o caminho do ficheiro Html");
             Console.Write("? ");
@@ -101,7 +108,7 @@ namespace HtmlStrip
             return Methods.readFile(pathInput);
         }
 
-        private static String GetHtmlByInput() //executa 3º opção
+        private static string GetHtmlByInput() //executa 3º opção
         {
             return Methods.OptionPasteHTML();
         }

@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace HtmlStrip
 {
@@ -14,9 +11,9 @@ namespace HtmlStrip
         private static string fileName;
         private static string pathString;
 
-        public static String GetUrlData(String urlAddress)  //dá return do HTML inteiro
+        public static string GetUrlData(string urlAddress)  //dá return do HTML inteiro
         {
-            String urlData;
+            string urlData;
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(urlAddress);
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
             if (response.StatusCode == HttpStatusCode.OK)
@@ -41,31 +38,31 @@ namespace HtmlStrip
             return urlData;
         }
 
-        public static String ReadInput()
+        public static string ReadInput()
         {
             Console.Write("?");
             string input = Console.ReadLine();
             return input;
         }
 
-        public static String ExtractHtml(String urlData)
+        public static string ExtractHtml(string urlData)
         {
-            String htmlAfterStrip = Regex.Replace(urlData, "<.*?>", "");
+            string htmlAfterStrip = Regex.Replace(urlData, "<.*?>", "");
 
             return htmlAfterStrip;
         }
 
-        public static String RemoveWhiteSpaces( String value )
+        public static string RemoveWhiteSpaces( string value )
         {
             return Regex.Replace(value, @"\s+", "");
         }
 
-        public static String OptionPasteHTML() 
+        public static string OptionPasteHTML() 
         {
             string allLines = "";
             string line = "";
             ConsoleKeyInfo keyPressed;
-            Console.WriteLine("Paste your code, and then on an empty line press 'END' key");
+            Console.WriteLine("Escreve ou cola o código, e depois numa linha vazia pressiona a tecla 'END'");
             while ( true )
             {   
                 keyPressed = Console.ReadKey(true);
@@ -82,7 +79,6 @@ namespace HtmlStrip
         string diretorio = Console.ReadLine();
         // Especificar um nome para a Pasta 
         string folderName = @diretorio;
-        //string folderName = @"C:\Users\joaol\OneDrive\Documentos\GitHub\ESWF-HTMLSTRIP\HtmlStrip\FicheirosCodigo";
 
         //Criar uma subPasta nesse diretorio com um nome especifico
         pathString = System.IO.Path.Combine(folderName, "SubFolder");
@@ -95,15 +91,9 @@ namespace HtmlStrip
         //Criar o nome do ficheiro
         fileName = userName + ".txt";
 
-        // This example uses a random string for the name, but you also can specify
-        // a particular name.
-        //string fileName = "MyNewFile.txt";
-
         // Use Combine again to add the file name to the path.
         pathString = System.IO.Path.Combine(pathString, fileName);
 
-        // Verify the path that you have constructed.
-        Console.WriteLine("Path to my file: {0}\n", pathString);
         writeFile( data );
     }
     private static void writeFile( string data )
@@ -118,16 +108,19 @@ namespace HtmlStrip
                     sr.WriteLine( data );
                 }
             }
+            
+            // Verify the path that you have constructed.
+            Console.WriteLine("Ficheiro criado com sucesso! \n Caminho do ficheiro: {0}\n", pathString);
         }
         else
         {
-            Console.WriteLine("Ficheiro \"{0}\" já existe.", fileName);
-            return;
+            Console.WriteLine("Ficheiro " + fileName + " já existe. Tenta outro nome.");
+            criarFicheiro( data );
         }
 
     }
 
-    public static String readFile( String path)
+    public static string readFile( string path)
     {
 
         string result = "";
@@ -137,9 +130,8 @@ namespace HtmlStrip
         }
         catch (Exception e)
         {
-            Console.WriteLine("Exception: " + e.Message);
+            throw e;
         }
-        
         return result;
         }
     }
