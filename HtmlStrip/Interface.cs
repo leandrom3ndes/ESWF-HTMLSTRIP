@@ -81,7 +81,6 @@ namespace HtmlStrip
         {
 
             string option = Methods.ReadInput();
-            string data;
             switch (option)
             {
                 case "1":

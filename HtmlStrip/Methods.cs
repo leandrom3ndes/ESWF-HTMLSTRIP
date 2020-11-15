@@ -77,8 +77,15 @@ namespace HtmlStrip
         {
             Console.WriteLine("Indique o diretorio para colocar o ficheiro:");
             string diretorio = Console.ReadLine();
+
+            if(String.IsNullOrWhiteSpace(diretorio)){
+                Console.WriteLine("Necessita de adicionar um diretorio (EX: C:\\Users..)!");
+                criarFicheiro( data );
+            }
+
             // Especificar um nome para a Pasta 
             string folderName = @diretorio;
+
 
             //Criar uma subPasta nesse diretorio com um nome especifico
             pathString = System.IO.Path.Combine(folderName, "PastaHTMLSTRIP");
@@ -88,10 +95,15 @@ namespace HtmlStrip
 
             Console.WriteLine("Escreva o nome do Ficheiro:");
             string userName = Console.ReadLine();
-            
+
+            if(String.IsNullOrWhiteSpace(userName)){
+                Console.WriteLine("Necessita de adicionar um nome ao ficheiro!");
+                criarFicheiro( data );
+            }
+
             //Criar o nome do ficheiro
             fileName = userName + ".txt";
-            
+
             //Adicionar o nome do ficheiro ao diretorio
             pathString = System.IO.Path.Combine(pathString, fileName);
 
