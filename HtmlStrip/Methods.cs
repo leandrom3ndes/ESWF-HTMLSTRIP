@@ -73,71 +73,73 @@ namespace HtmlStrip
             return allLines;
         }
 
-    public static void criarFicheiro( string data )
-    {
-        Console.WriteLine("Indique o diretorio para colocar o ficheiro:");
-        string diretorio = Console.ReadLine();
-        // Especificar um nome para a Pasta 
-        string folderName = @diretorio;
-
-        //Criar uma subPasta nesse diretorio com um nome especifico
-        pathString = System.IO.Path.Combine(folderName, "PastaHTMLSTRIP");
-
-        // Criar o diretorio
-        System.IO.Directory.CreateDirectory(pathString);
-
-        Console.WriteLine("Escreva o nome do Ficheiro:");
-        string userName = Console.ReadLine();
-        //Criar o nome do ficheiro
-        fileName = userName + ".txt";
-        
-        //Adicionar o nome do ficheiro ao diretorio
-        pathString = System.IO.Path.Combine(pathString, fileName);
-
-        writeFile( data );
-    }
-    private static void writeFile( string data )
-    {
-        //System.IO.File.Create faz overwrite do ficheiro caso não exista
-        if (!System.IO.File.Exists(pathString))
+        public static void criarFicheiro( string data )
         {
-            using (System.IO.FileStream fs = System.IO.File.Create(pathString))
+            Console.WriteLine("Indique o diretorio para colocar o ficheiro:");
+            string diretorio = Console.ReadLine();
+            // Especificar um nome para a Pasta 
+            string folderName = @diretorio;
+
+            //Criar uma subPasta nesse diretorio com um nome especifico
+            pathString = System.IO.Path.Combine(folderName, "PastaHTMLSTRIP");
+
+            // Criar o diretorio
+            System.IO.Directory.CreateDirectory(pathString);
+
+            Console.WriteLine("Escreva o nome do Ficheiro:");
+            string userName = Console.ReadLine();
+            
+            //Criar o nome do ficheiro
+            fileName = userName + ".txt";
+            
+            //Adicionar o nome do ficheiro ao diretorio
+            pathString = System.IO.Path.Combine(pathString, fileName);
+
+            writeFile( data );
+        }
+        private static void writeFile( string data )
+        {
+            //System.IO.File.Create faz overwrite do ficheiro caso não exista
+            if (!System.IO.File.Exists(pathString))
             {
-                using (var sr = new System.IO.StreamWriter(fs))
+                using (System.IO.FileStream fs = System.IO.File.Create(pathString))
                 {
-                    sr.WriteLine( data );
+                    using (var sr = new System.IO.StreamWriter(fs))
+                    {
+                        sr.WriteLine( data );
+                    }
                 }
+                
+                // Verify the path that you have constructed.
+                Console.WriteLine("Ficheiro criado com sucesso! \n Caminho do ficheiro: {0}\n", pathString);
             }
-            
-            // Verify the path that you have constructed.
-            Console.WriteLine("Ficheiro criado com sucesso! \n Caminho do ficheiro: {0}\n", pathString);
-        }
-        else
-        {
-            Console.WriteLine("*********************************************");
-            Console.WriteLine("-> O ficheiro \"{0}\" já existe. <-", fileName);
-            Console.WriteLine("*********************************************");
-            Console.WriteLine("");
-            Interface.FileUI();
-            Interface.GetInputFile(data);
-            
+            else
+            {
+                Console.WriteLine("*********************************************");
+                Console.WriteLine("-> O ficheiro \"{0}\" já existe. <-", fileName);
+                Console.WriteLine("*********************************************");
+                Console.WriteLine("");
+                Interface.FileUI();
+                Interface.GetInputFile(data);
+                
+            }
+
         }
 
-    }
-
-    public static string readFile( string path)
-    {
-
-        string result = "";
-        try
+        public static string readFile( string path)
         {
-            result = System.IO.File.ReadAllText( path );
-        }
-        catch (Exception e)
-        {
-            throw e;
-        }
-        return result;
+
+            string result = "";
+            try
+            {
+                result = System.IO.File.ReadAllText( path );
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            return result;
         }
     }
+    
 }
