@@ -11,6 +11,8 @@ namespace HtmlStrip
 {
     public static class Methods
     {
+        private static string fileName;
+        private static string pathString;
 
         public static String GetUrlData(String urlAddress)  //dá return do HTML inteiro
         {
@@ -72,6 +74,73 @@ namespace HtmlStrip
                 allLines += line;
             }
             return allLines;
+        }
+
+    public static void criarFicheiro( string data )
+    {
+        Console.WriteLine("Indique o diretorio para colocar o ficheiro:");
+        string diretorio = Console.ReadLine();
+        // Especificar um nome para a Pasta 
+        string folderName = @diretorio;
+        //string folderName = @"C:\Users\joaol\OneDrive\Documentos\GitHub\ESWF-HTMLSTRIP\HtmlStrip\FicheirosCodigo";
+
+        //Criar uma subPasta nesse diretorio com um nome especifico
+        pathString = System.IO.Path.Combine(folderName, "SubFolder");
+
+        // Criar o diretorio
+        System.IO.Directory.CreateDirectory(pathString);
+
+        Console.WriteLine("Escreva o nome do Ficheiro:");
+        string userName = Console.ReadLine();
+        //Criar o nome do ficheiro
+        fileName = userName + ".txt";
+
+        // This example uses a random string for the name, but you also can specify
+        // a particular name.
+        //string fileName = "MyNewFile.txt";
+
+        // Use Combine again to add the file name to the path.
+        pathString = System.IO.Path.Combine(pathString, fileName);
+
+        // Verify the path that you have constructed.
+        Console.WriteLine("Path to my file: {0}\n", pathString);
+        writeFile( data );
+    }
+    private static void writeFile( string data )
+    {
+        //System.IO.File.Create faz overwrite do ficheiro caso não exista
+        if (!System.IO.File.Exists(pathString))
+        {
+            using (System.IO.FileStream fs = System.IO.File.Create(pathString))
+            {
+                using (var sr = new System.IO.StreamWriter(fs))
+                {
+                    sr.WriteLine( data );
+                }
+            }
+        }
+        else
+        {
+            Console.WriteLine("Ficheiro \"{0}\" já existe.", fileName);
+            return;
+        }
+
+    }
+
+    public static String readFile( String path)
+    {
+
+        string result = "";
+        try
+        {
+            result = System.IO.File.ReadAllText( path );
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Exception: " + e.Message);
+        }
+        
+        return result;
         }
     }
 }

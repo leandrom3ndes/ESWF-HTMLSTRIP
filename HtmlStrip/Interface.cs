@@ -72,12 +72,11 @@ namespace HtmlStrip
                     Console.WriteLine(HtmlStripedWithoutEmptySpaces);
                     break;
                 case "2":
-                    //Extrair "HtmlStriped" para o ficheiro de texto
-                    //chamar função do Leandro
+                    Methods.criarFicheiro( HtmlStripedWithoutEmptySpaces );
                     break;
                 default:
                     Console.WriteLine("Selecione uma das opções anteriores.");
-                    ExtrationMode(data);
+                    ExtrationMode(HtmlStripedWithoutEmptySpaces);
                     break;
             }
 
@@ -99,14 +98,12 @@ namespace HtmlStrip
             Console.Write("? ");
             string pathInput = Console.ReadLine();
             
-            //dar return da função do Leandro que extrai o HTML através do caminho
-            return pathInput;
+            return Methods.readFile(pathInput);
         }
 
         private static String GetHtmlByInput() //executa 3º opção
         {
             return Methods.OptionPasteHTML();
-
         }
     }
 }
